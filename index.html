@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#edeee6" />
+    <meta name="description" content="Wangock — разработчик. Портфолио в карманной консоли: обо мне, проекты, услуги и контакты. Нажми START." />
+    <meta property="og:title" content="Wangock Pocket — нажми START" />
+    <meta property="og:description" content="Маленькая консоль. Большие идеи. Интерактивное портфолио разработчика Wangock." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wangock.tech/" />
+    <link rel="canonical" href="https://wangock.tech/" />
+    <title>Wangock Pocket — портфолио</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="./assets/pixel.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <main class="console-stage" aria-label="Портфолио Wangock — портативная консоль">
+      <h1 class="sr-only">Wangock — портфолио разработчика</h1>
+      <div class="console" id="console" data-power="off">
+        <div class="top-ridge" aria-hidden="true"></div>
+        <div class="power-control">
+          <span>OFF</span><button id="power-toggle" class="power-switch" role="switch" aria-checked="false" aria-label="Питание консоли" title="Питание · P"><span></span></button><span>ON</span>
+        </div>
+        <div class="sound-control">
+          <span>SOUND</span><button id="sound-toggle" class="sound-toggle" aria-label="Включить звук" aria-pressed="false" title="Звук · M"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="speaker-icon" d="m11 5-6 4H2v6h3l6 4V5Z"/><path class="sound-wave" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-mute" d="m16 9 6 6m0-6-6 6"/></svg><i></i></button>
+        </div>
+        <div class="screen-bezel">
+          <div class="bezel-heading"><span></span><p>DOT MATRIX WITH STEREO SOUND</p><span></span></div>
+          <div class="power-led"><i></i><span>BATTERY</span></div>
+          <div class="lcd" id="lcd" aria-label="Экран портфолио" aria-busy="false">
+            <div id="screen-content" class="screen-content"></div>
+            <div class="lcd-glass" aria-hidden="true"></div>
+          </div>
+          <span class="bezel-bottom">WIDE VIEW · 8-BIT ORIGINAL</span>
+        </div>
+        <div class="console-brand"><span>Wangock</span> <strong>POCKET</strong><sup>™</sup><span class="edition">DEVELOPER EDITION</span></div>
+        <div class="control-deck">
+          <div class="dpad-well">
+            <div class="dpad" role="group" aria-label="Крестовина">
+              <span class="dpad-shape" aria-hidden="true"></span>
+              <button class="direction up" data-control="up" aria-label="Вверх"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3 14 13H2Z"/></svg></button>
+              <button class="direction right" data-control="right" aria-label="Вправо"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m13 8-10 6V2Z"/></svg></button>
+              <button class="direction down" data-control="down" aria-label="Вниз"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13 2 3h12Z"/></svg></button>
+              <button class="direction left" data-control="left" aria-label="Влево"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m3 8 10-6v12Z"/></svg></button>
+              <span class="dpad-center" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="ab-well" role="group" aria-label="Кнопки действия">
+            <div class="action-key b-key"><button id="button-b" class="round-button" data-control="back" aria-label="B — назад">B</button><span>B</span></div>
+            <div class="action-key a-key"><button id="button-a" class="round-button" data-control="confirm" aria-label="A — открыть">A</button><span>A</span></div>
+          </div>
+        </div>
+        <div class="system-buttons">
+          <div><button id="button-select" data-control="select" aria-label="SELECT — главное меню"></button><span>SELECT</span></div>
+          <div><button id="button-start" data-control="start" aria-label="START — включить или открыть"></button><span>START</span></div>
+        </div>
+        <div class="speaker" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="keyboard-legend" aria-label="Клавиатура: стрелки — выбор, Enter — открыть, Escape — назад">↑↓←→ <span>ВЫБОР</span> · ENTER <span>A</span> · ESC <span>B</span></div>
+        <div class="console-bottom-mark" aria-hidden="true">PHONES <span>◖◗</span></div>
+        <div class="shell-seam" aria-hidden="true"></div>
+        <noscript><div class="no-js">Для включения консоли нужен JavaScript.<br>Telegram: @wangock</div></noscript>
+      </div>
+    </main>
+    <div class="sr-only" id="announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
